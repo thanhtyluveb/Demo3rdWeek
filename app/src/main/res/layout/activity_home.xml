@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#f2f3fa
+
+"
+	tools:context=".HomeActivity">
+
+	<FrameLayout
+		android:id="@+id/layoutContainer"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toTopOf="@+id/layoutCurrentItem"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+
+	<LinearLayout
+		android:id="@+id/layoutCurrentItem"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#fff"
+		android:orientation="horizontal"
+		android:paddingBottom="15dp"
+		android:weightSum="5"
+		app:layout_constraintBottom_toTopOf="@id/layoutHome"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent">
+
+		<ImageView
+			android:layout_width="0dp"
+			android:layout_height="2dp"
+			android:layout_marginStart="5dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginEnd="5dp"
+			android:layout_weight="1"
+			android:background="@color/pinkE9446A"/>
+
+		<ImageView
+			android:layout_width="0dp"
+			android:layout_height="2dp"
+			android:layout_marginStart="5dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginEnd="5dp"
+			android:layout_weight="1"
+			android:background="@color/pinkE9446A"/>
+
+		<ImageView
+			android:layout_width="0dp"
+			android:layout_height="2dp"
+			android:layout_marginStart="5dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginEnd="5dp"
+			android:layout_weight="1"
+			android:background="@color/pinkE9446A"/>
+
+		<ImageView
+			android:layout_width="0dp"
+			android:layout_height="2dp"
+			android:layout_marginStart="5dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginEnd="5dp"
+			android:layout_weight="1"
+			android:background="@color/pinkE9446A"/>
+
+		<ImageView
+			android:layout_width="0dp"
+			android:layout_height="2dp"
+			android:layout_marginStart="5dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginEnd="5dp"
+			android:layout_weight="1"
+			android:background="@color/pinkE9446A"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/layoutHome"
+		android:layout_width="match_parent"
+		android:layout_height="90dp"
+		android:background="#fff"
+		android:orientation="horizontal"
+		android:weightSum="5"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent">
+
+		<ImageView
+			android:id="@+id/btnHome"
+			android:layout_width="0dp"
+			android:layout_height="@dimen/dp26"
+			android:layout_weight="1"
+			android:src="@drawable/ic_home"/>
+
+		<ImageView
+			android:id="@+id/btnMess"
+			android:layout_width="0dp"
+			android:layout_height="@dimen/dp26"
+			android:layout_weight="1"
+			android:src="@drawable/ic_mess"/>
+
+		<ImageView
+			android:id="@+id/btnPlus"
+			android:layout_width="0dp"
+			android:layout_height="60dp"
+			android:layout_weight="1"
+			android:src="@drawable/ic_plus"/>
+
+		<ImageView
+			android:id="@+id/btnBell"
+			android:layout_width="0dp"
+			android:layout_height="@dimen/dp26"
+			android:layout_weight="1"
+			android:src="@drawable/ic_bell"/>
+
+		<ImageView
+			android:id="@+id/btnProfile"
+			android:layout_width="0dp"
+			android:layout_height="@dimen/dp26"
+			android:layout_weight="1"
+			android:src="@drawable/ic_home"/>
+	</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

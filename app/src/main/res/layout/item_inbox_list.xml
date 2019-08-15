@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tool="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<ImageView
+		android:id="@+id/imgAvatarInBox"
+		android:layout_width="@dimen/dp54"
+		android:layout_height="@dimen/dp54"
+		android:layout_marginStart="@dimen/dp25"
+		android:layout_marginLeft="@dimen/dp25"
+		android:layout_marginTop="@dimen/dp18"
+		android:layout_marginBottom="@dimen/dp25"
+		android:src="@drawable/profile_main_avatar"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+
+	<TextView
+		android:id="@+id/tvNameInbox"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/dp30"
+		android:layout_marginLeft="@dimen/dp30"
+		android:textColor="@color/pinkE9446A"
+		android:textSize="15sp"
+		app:layout_constraintBottom_toTopOf="@+id/tvMessageInbox"
+		app:layout_constraintStart_toEndOf="@+id/imgAvatarInBox"
+		app:layout_constraintTop_toTopOf="@+id/imgAvatarInBox"
+		tool:text="Name"/>
+
+	<TextView
+		android:id="@+id/tvMessageInbox"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintBottom_toBottomOf="@+id/imgAvatarInBox"
+		app:layout_constraintStart_toStartOf="@+id/tvNameInbox"
+		app:layout_constraintTop_toBottomOf="@+id/tvNameInbox"
+		tool:text="Message"/>
+
+	<androidx.cardview.widget.CardView
+		android:id="@+id/cvNumberMess"
+		android:layout_width="17dp"
+		android:layout_height="17dp"
+		app:cardCornerRadius="8dp"
+		app:layout_constraintBottom_toTopOf="@+id/tvTimeInBox"
+		app:layout_constraintEnd_toEndOf="@+id/tvTimeInBox"
+		app:layout_constraintTop_toTopOf="@+id/tvNameInbox">
+
+		<TextView
+			android:id="@+id/tvNumberMess"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/pinkE9446A"
+			android:gravity="center"
+			android:text="2"
+			android:textColor="#fff"/>
+	</androidx.cardview.widget.CardView>
+
+
+	<TextView
+		android:id="@+id/tvTimeInBox"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="@dimen/dp25"
+		android:layout_marginRight="@dimen/dp25"
+		app:layout_constraintBottom_toBottomOf="@+id/tvMessageInbox"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/cvNumberMess"
+		tool:text="5 : 45 PM"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

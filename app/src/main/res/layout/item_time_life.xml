@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tool="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="#fff">
+
+	<androidx.cardview.widget.CardView
+		android:id="@+id/cvAvatarTimeLife"
+		android:layout_width="@dimen/dp36"
+		android:layout_height="@dimen/dp36"
+		android:layout_marginStart="@dimen/dp26"
+		android:layout_marginLeft="@dimen/dp26"
+		android:layout_marginTop="@dimen/dp26"
+		app:cardCornerRadius="@dimen/dp18"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<ImageView
+			android:id="@+id/imgAvatarTimeLife"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:src="@drawable/profile"/>
+	</androidx.cardview.widget.CardView>
+
+	<TextView
+		android:id="@+id/tvNameLifeTime"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/dp20"
+		android:layout_marginLeft="@dimen/dp20"
+		android:textColor="@color/blueCC161F3D"
+		android:textSize="15sp"
+		app:layout_constraintBottom_toTopOf="@+id/tvTimeTimeLife"
+		app:layout_constraintStart_toEndOf="@+id/cvAvatarTimeLife"
+		app:layout_constraintTop_toTopOf="@+id/cvAvatarTimeLife"
+		tool:text="this is my name"/>
+
+	<TextView
+		android:id="@+id/tvTimeTimeLife"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:textColor="@color/blue66161F3D"
+		android:textSize="10sp"
+		app:layout_constraintBottom_toBottomOf="@+id/cvAvatarTimeLife"
+		app:layout_constraintEnd_toEndOf="@id/tvNameLifeTime"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintStart_toStartOf="@+id/tvNameLifeTime"
+		app:layout_constraintTop_toBottomOf="@+id/tvNameLifeTime"
+		tool:text="Today, 03:24 PM"/>
+
+	<ImageView
+		android:id="@+id/imageView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="@dimen/dp26"
+		android:layout_marginRight="@dimen/dp26"
+		android:background="@drawable/menu_dots"
+		app:layout_constraintBottom_toBottomOf="@+id/tvTimeTimeLife"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/tvNameLifeTime">
+
+	</ImageView>
+
+	<TextView
+		android:id="@+id/tvContentTimeLife"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:textColor="#000"
+		android:textSize="13sp"
+		app:layout_constraintEnd_toEndOf="@+id/imageView"
+		app:layout_constraintStart_toStartOf="@id/tvTimeTimeLife"
+		app:layout_constraintTop_toBottomOf="@id/tvTimeTimeLife"
+		tool:layout_editor_absoluteY="104dp"
+		tool:text="What is the loop of Creation? How is there something from nothing? In spite of the fact that it is impossible to prove that anythin…."/>
+
+	<androidx.cardview.widget.CardView
+		android:id="@+id/cvImgContentTimeLife"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		app:cardCornerRadius="@dimen/dp5"
+		app:layout_constraintEnd_toEndOf="@id/tvContentTimeLife"
+		app:layout_constraintStart_toStartOf="@id/tvContentTimeLife"
+		app:layout_constraintTop_toBottomOf="@id/tvContentTimeLife">
+
+		<ImageView
+			android:id="@+id/imgContentTimeLife"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:scaleType="centerCrop"
+			android:src="@drawable/rectangle_copy"/>
+	</androidx.cardview.widget.CardView>
+
+	<RelativeLayout
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dp20"
+		android:layout_marginBottom="@dimen/dp26"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="@id/tvContentTimeLife"
+		app:layout_constraintStart_toStartOf="@id/tvContentTimeLife"
+		app:layout_constraintTop_toBottomOf="@id/cvImgContentTimeLife">
+
+		<ImageView
+			android:id="@+id/imgLike"
+			android:layout_width="@dimen/dp24"
+			android:layout_height="@dimen/dp24"
+			android:layout_alignParentStart="true"
+			android:layout_alignParentLeft="true"
+			android:layout_marginStart="0dp"
+			android:layout_marginLeft="0dp"
+			android:src="@drawable/ic_heart_blank"/>
+
+		<ImageView
+			android:id="@+id/imgComment"
+			android:layout_width="@dimen/dp24"
+			android:layout_height="@dimen/dp24"
+			android:layout_marginStart="@dimen/dp26"
+			android:layout_marginLeft="@dimen/dp26"
+			android:layout_toEndOf="@id/imgLike"
+			android:layout_toRightOf="@id/imgLike"
+			android:src="@drawable/ic_comment"/>
+
+		<TextView
+			android:id="@+id/tvMoney"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:textColor="#000"
+			tool:text="2000 $"/>
+	</RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
